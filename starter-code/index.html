@@ -12,7 +12,7 @@
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
 
     <!--
-      TODO:(done) Add a script tag to hold the Handlebars template.
+      (done) Add a script tag to hold the Handlebars template.
         - Be sure to give it a meaningful id attribute.
         - Move your old template structure to here. Remember that this template
           needs to have the same structure as the old one!
@@ -20,12 +20,12 @@
         - If your object doesn't have values you need yet, you can add those properties in the model.
     -->
     <script id="blog-template" type="text/x-handlebars-template">
-      <article data-category="{{category}}">
+      <article data-category="{{category}}" data-author="{{author}}">
         <header>
           <h1>{{title}}</h1>
           <div class="byline">
-            By <address><a href='{{authorUrl}}'>{{author}}</a></address>
-            published <time pubdate datetime='{{publishedOn}}'>Publish Time</time>
+            By <address><a href="{{authorUrl}}">{{author}}</a></address>
+            <time pubdate datetime="{{publishedOn}}">{{publishStatus}}</time>
           </div>
         </header>
         <section class="article-body">
@@ -95,7 +95,7 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- TODO:(done) Include Handlebars.JS from a CDN -->
+    <!-- (done) Include Handlebars.JS from a CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="scripts/blogArticles.js"></script>
     <script src="scripts/article.js"></script>
